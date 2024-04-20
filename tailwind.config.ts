@@ -10,6 +10,8 @@ const config: Config = {
     extend: {
       backgroundImage: {
         "hero-pattern": "url(/meggi.jpg)",
+        "meggi": "url(/meggi.jpg)",
+        "collector": "url(/collector.jpg)",
       },
     },
   },
