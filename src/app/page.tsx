@@ -1,5 +1,8 @@
 import Image from 'next/image'
 import menu from '../../public/menu.svg'
+import { Rubik_Mono_One } from 'next/font/google'
+
+const rubikMono = Rubik_Mono_One({ weight: ['400'], subsets: ['latin'] })
 
 const quests = [
   {
@@ -23,9 +26,9 @@ const quests = [
 
 export default function Home() {
   return (
-    <main className="bg-neutral-700 w-screen">
+    <main className="bg-neutral-800 w-screen">
       <nav className="flex justify-between bg-neutral-950 p-4 absolute w-full">
-        <a className="text-white">Квесты в Калининграде</a>
+        <a className={`${rubikMono.className}`}>Квесты в Калининграде</a>
         <button>
           <Image src={menu} alt="menu" />
         </button>
@@ -34,11 +37,15 @@ export default function Home() {
       <section className="flex flex-col">
         {quests.map((i, index) => {
           return (
-            <div key={index} className="p-4">
+            <div key={index} className="m-4 bg-neutral-900">
               <div
-                className={`${i.backgroundImage} h-80 bg-no-repeat bg-cover bg-center`}
-              ></div>
-              <p>{i.description}</p>
+                className={`${i.backgroundImage} h-80 bg-no-repeat bg-cover bg-center relative`}
+              >
+                <h1 className={`absolute bottom-0 p-4 ${rubikMono.className}`}>
+                  {i.title}
+                </h1>
+              </div>
+              <p className="p-4 leading-relaxed">{i.description}</p>
             </div>
           )
         })}
