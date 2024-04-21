@@ -46,7 +46,7 @@ export default function Home() {
         </h1>
         <a
           href="#quests"
-          className="absolute bottom-20 border-2 rounded-md py-4 px-10"
+          className="absolute bottom-20 border-2 rounded-md py-4 px-10 active:bg-white active:text-neutral-950"
         >
           Перейти к просмотру
         </a>
