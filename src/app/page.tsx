@@ -7,7 +7,7 @@ const rubikMono = Rubik_Mono_One({ weight: ['400'], subsets: ['latin'] })
 export default function Home() {
   return (
     <main>
-      <section className="bg-hero-pattern h-screen bg-center bg-no-repeat bg-cover flex flex-col  justify-center items-center pl-4">
+      <section className="bg-hero-pattern h-screen bg-center bg-no-repeat bg-cover flex flex-col justify-center items-center pl-4">
         <h1 className={`${rubikMono.className} text-4xl`}>
           Склад квестов в Калининграде
         </h1>
