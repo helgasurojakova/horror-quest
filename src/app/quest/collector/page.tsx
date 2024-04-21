@@ -9,10 +9,11 @@ export default function Quest() {
 
   return (
     <main className="bg-neutral-800 w-full">
-      <section
-        className={`${quest?.backgroundImage} grayscale-[50%] h-screen bg-center bg-no-repeat bg-cover flex flex-col justify-center items-center`}
-      >
-        <div className="flex flex-col justify-start w-full p-4">
+      <section className="grayscale-[50%] h-screen flex flex-col justify-center items-center">
+        <div
+          className={`${quest?.backgroundImage} bg-center bg-no-repeat bg-cover absolute w-full h-full brightness-50`}
+        ></div>
+        <div className="flex flex-col justify-start w-full p-4 z-10">
           <span className="text-lg">Квест</span>
           <h1 className={`${rubikMono.className} text-2xl mb-8`}>
             {quest?.title}
