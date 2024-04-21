@@ -2,7 +2,6 @@ import menu from '@/assets/menu.svg'
 import { Rubik_Mono_One } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useState } from 'react'
 
 const rubikMono = Rubik_Mono_One({ weight: ['400'], subsets: ['latin'] })
 
