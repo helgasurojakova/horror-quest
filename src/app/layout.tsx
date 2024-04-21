@@ -10,6 +10,7 @@ import telegram from '../../public/telegram.svg'
 import vk from '../../public/vk.svg'
 import whatsapp from '../../public/whatsapp.svg'
 import './globals.css'
+import Link from 'next/link'
 
 const rubik = Rubik({ subsets: ['latin'] })
 const rubikMono = Rubik_Mono_One({ weight: ['400'], subsets: ['latin'] })
@@ -29,7 +30,9 @@ export default function RootLayout({
       <body className={rubik.className}>
         <main className="bg-neutral-800 w-full">
           <nav className="flex justify-between bg-neutral-950 p-4 absolute w-full">
-            <a className={`${rubikMono.className}`}>Квесты в Калининграде</a>
+            <Link className={`${rubikMono.className}`} href="/">
+              Квесты в Калининграде
+            </Link>
             <button>
               <Image src={menu} alt="menu" />
             </button>
