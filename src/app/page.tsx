@@ -8,12 +8,17 @@ export default function Home() {
   return (
     <main>
       <section className="bg-hero-pattern h-screen bg-center bg-no-repeat bg-cover flex flex-col justify-center items-center px-4 xl:px-60 lg:px-40 md:px-20 sm:px-4">
-        <h1 className={`${rubikMono.className} w-full text-2xl 2xl:text-6xl md:text-4xl sm:text-4xl`}>
-          Склад<br/>квестов в<br/>Калининграде
+        <h1
+          className={`${rubikMono.className} w-full text-2xl 2xl:text-6xl md:text-4xl sm:text-4xl`}
+        >
+          Склад
+          <br />
+          квестов в<br />
+          Калининграде
         </h1>
         <a
           href="#quests"
-          className="absolute bottom-20 border-2 rounded-md py-4 px-10 active:bg-white active:text-neutral-950"
+          className="absolute bottom-20 border-2 rounded-md py-4 px-10 transition ease-in-out delay-150 active:bg-white active:text-neutral-950 hover:bg-white hover:text-neutral-950"
         >
           Перейти к просмотру
         </a>

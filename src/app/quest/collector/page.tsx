@@ -35,7 +35,7 @@ export default function Quest() {
         </div>
         <a
           href="#description"
-          className="absolute bottom-20 border-2 rounded-md py-4 px-10 active:bg-white active:text-neutral-950"
+          className="absolute bottom-20 border-2 rounded-md py-4 px-10 transition ease-in-out delay-150 active:bg-white active:text-neutral-950 hover:bg-white hover:text-neutral-950"
         >
           Перейти к описанию
         </a>
