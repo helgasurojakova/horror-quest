@@ -25,7 +25,11 @@ export default function Home() {
       </section>
       <section
         id="quests"
-        className="flex flex-col xl:flex-row lg:flex-row md:flex-col xs:flex-col gap-6 w-full px-4 py-8 xl:px-60 lg:px-40 md:px-20 sm:px-4 xl:py-40 lg:py-40 md:py-8 sm:py-8"
+        className="
+        flex flex-col xl:flex-row lg:flex-row md:flex-col xs:flex-col gap-6 
+        w-full px-4 py-8 xl:px-60 lg:px-40 md:px-20 sm:px-4 xl:py-60 lg:py-60 md:py-8 sm:py-8
+        xl:h-screen lg:h-screen
+        "
       >
         {quests.map((i, index) => {
           return i?.status === 'active' ? (
@@ -34,7 +38,7 @@ export default function Home() {
               key={index}
               className="xl:w-4/12 lg:w-4/12"
             >
-              <div className="bg-neutral-900">
+              <div className="quest-card relative">
                 <div
                   className={`${i.backgroundImage} h-80 bg-no-repeat bg-cover bg-center relative`}
                 >
@@ -44,13 +48,15 @@ export default function Home() {
                     {i.title}
                   </h1>
                 </div>
-                <p className="p-4 leading-relaxed text-sm overflow-hidden xl:h-0 lg:h-0 xl:p-0 lg:p-0">
-                  {i.description}
-                </p>
+                <div className="description-holder static xl:absolute lg:absolute md:static sm:static overflow-hidden">
+                  <p className="p-4 bg-neutral-900 leading-relaxed text-sm">
+                    {i.description}
+                  </p>
+                </div>
               </div>
             </Link>
           ) : (
-            <div className="bg-neutral-900 xl:w-4/12 lg:w-4/12">
+            <div className="bg-neutral-800 xl:w-4/12 lg:w-4/12 relative">
               <div
                 className={`${i.backgroundImage} h-80 bg-no-repeat bg-cover bg-center relative`}
               >
