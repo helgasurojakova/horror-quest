@@ -9,7 +9,7 @@ import whatsapp from '@/assets/whatsapp.svg'
 
 export default function Footer() {
   return (
-    <footer className="w-full p-4">
+    <footer className="w-full p-4 p-4 xl:px-60 lg:px-40 md:px-4 sm:px-4">
       <div className="flex flex-col gap-4">
         <div className="flex gap-4 items-center">
           <Image src={location} alt="Локация" className="w-6" />
