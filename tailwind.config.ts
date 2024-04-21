@@ -12,6 +12,7 @@ const config: Config = {
         "hero-pattern": "url(/collector.jpg)",
         "meggi": "url(/meggi.jpg)",
         "collector": "url(/collector.jpg)",
+        "fortuneteller": "url(/fortuneteller.jpg)",
       },
     },
   },

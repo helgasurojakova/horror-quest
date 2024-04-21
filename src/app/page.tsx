@@ -23,10 +23,17 @@ export default function Home() {
           Перейти к просмотру
         </a>
       </section>
-      <section id="quests" className="flex flex-col px-4 w-full gap-6 py-8">
+      <section
+        id="quests"
+        className="flex flex-col xl:flex-row lg:flex-row md:flex-col xs:flex-col px-4 w-full gap-6 py-8 xl:px-60 lg:px-40 md:px-20 sm:px-4"
+      >
         {quests.map((i, index) => {
-          return (
-            <Link href={`/quest/${i.key}`} key={index}>
+          return i?.status === 'active' ? (
+            <Link
+              href={`/quest/${i.key}`}
+              key={index}
+              className="xl:w-4/12 lg:w-4/12"
+            >
               <div className="bg-neutral-900">
                 <div
                   className={`${i.backgroundImage} h-80 bg-no-repeat bg-cover bg-center relative`}
@@ -37,9 +44,24 @@ export default function Home() {
                     {i.title}
                   </h1>
                 </div>
-                <p className="p-4 leading-relaxed">{i.description}</p>
+                <p className="p-4 leading-relaxed text-sm overflow-hidden">
+                  {i.description}
+                </p>
               </div>
             </Link>
+          ) : (
+            <div className="bg-neutral-900 xl:w-4/12 lg:w-4/12">
+              <div
+                className={`${i.backgroundImage} h-80 bg-no-repeat bg-cover bg-center relative`}
+              >
+                <h1 className={`absolute bottom-0 p-4 ${rubikMono.className}`}>
+                  {i.title}
+                </h1>
+              </div>
+              <p className="p-4 leading-relaxed text-sm overflow-hidden">
+                {i.description}
+              </p>
+            </div>
           )
         })}
       </section>

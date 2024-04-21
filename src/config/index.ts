@@ -1,6 +1,7 @@
 export const quests = [
   {
     key: 'collector',
+    status: 'active',
     title: 'Коллекционер',
     description: `На улице Клинической в заброшенном здании обнаружили логово маньяка
     с телами жертв. Последнюю пропавшую девушку найти не удалось.
@@ -18,11 +19,27 @@ export const quests = [
   },
   {
     key: 'meggi',
+    status: 'active',
     title: 'Проклятие Мэгги',
     description: `Окунись в атмосферу страха и стань главным персонажем жуткой истории
     о проклятой Мэгги. Какие тайны она скрывает? Пройди все испытания,
     проявив свои лучшие качества!`,
     backgroundImage: 'bg-meggi',
+    playersCount: '2 – 6',
+    time: 60,
+    price: 4000,
+    ageLimit: 16,
+    comment: 'Квест с элементами перформанса.',
+    ageComment: '16+ (с 14 лет в сопровождении взрослых)',
+    priceComment:
+      'Стоимость игры для команды от 2 до 4 человек – 4000 рублей. Доплата за дополнительного игрока – 1000 рублей',
+  },
+  {
+    key: 'fortuneteller',
+    status: 'development',
+    title: 'Гадалка',
+    description: '',
+    backgroundImage: 'bg-fortuneteller',
     playersCount: '2 – 6',
     time: 60,
     price: 4000,
