@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "hero-pattern": "url(/meggi.jpg)",
+        "hero-pattern": "url(/collector.jpg)",
         "meggi": "url(/meggi.jpg)",
         "collector": "url(/collector.jpg)",
       },

@@ -40,8 +40,18 @@ export default function Home() {
           <Image src={menu} alt="menu" />
         </button>
       </nav>
-      <section className="bg-hero-pattern h-screen bg-center bg-no-repeat bg-cover"></section>
-      <section className="flex flex-col px-4 w-full gap-6 py-8">
+      <section className="bg-hero-pattern h-screen bg-center bg-no-repeat bg-cover flex flex-col  justify-center items-center pl-4">
+        <h1 className={`${rubikMono.className} text-4xl`}>
+          Склад квестов в Калининграде
+        </h1>
+        <a
+          href="#quests"
+          className="absolute bottom-20 border-2 rounded-md py-4 px-10"
+        >
+          Перейти к просмотру
+        </a>
+      </section>
+      <section id="quests" className="flex flex-col px-4 w-full gap-6 py-8">
         {quests.map((i, index) => {
           return (
             <div key={index} className="bg-neutral-900">
