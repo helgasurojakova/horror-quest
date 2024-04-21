@@ -1,5 +1,8 @@
 import React from 'react'
 import { quests } from '@/config'
+import { Rubik_Mono_One } from 'next/font/google'
+
+const rubikMono = Rubik_Mono_One({ weight: ['400'], subsets: ['latin'] })
 
 export default function Quest() {
   const quest = quests.find((el) => el.key === 'collector')
@@ -7,8 +10,28 @@ export default function Quest() {
   return (
     <main className="bg-neutral-800 w-full">
       <section
-        className={`${quest?.backgroundImage} h-screen bg-center bg-no-repeat bg-cover flex flex-col justify-center items-center`}
+        className={`${quest?.backgroundImage} grayscale-[50%] h-screen bg-center bg-no-repeat bg-cover flex flex-col justify-center items-center`}
       >
+        <div className="flex flex-col justify-start w-full p-4">
+          <span className="text-lg">Квест</span>
+          <h1 className={`${rubikMono.className} text-2xl mb-8`}>
+            {quest?.title}
+          </h1>
+          <div className="flex flex-col gap-4">
+            <span className="border-b pb-4 border-inherit">
+              Игроков<strong className="pl-4">{quest?.playersCount}</strong>
+            </span>
+            <span className="border-b pb-4 border-inherit">
+              Время<strong className="pl-4">{quest?.time} мин</strong>
+            </span>
+            <span className="border-b pb-4 border-inherit">
+              Цена<strong className="pl-4">{quest?.price} ₽</strong>
+            </span>
+            <span className="border-b pb-4 border-inherit">
+              Возраст<strong className="pl-4">{quest?.ageLimit}+</strong>
+            </span>
+          </div>
+        </div>
         <a
           href="#quest"
           className="absolute bottom-20 border-2 rounded-md py-4 px-10 active:bg-white active:text-neutral-950"

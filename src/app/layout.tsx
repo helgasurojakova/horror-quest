@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={rubik.className}>
         <main className="bg-neutral-800 w-full">
-          <nav className="flex justify-between bg-neutral-950 p-4 absolute w-full">
+          <nav className="flex justify-between bg-neutral-950 p-4 absolute w-full z-10">
             <Link className={`${rubikMono.className}`} href="/">
               Квесты в Калининграде
             </Link>
