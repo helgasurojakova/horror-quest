@@ -38,7 +38,7 @@ export default function Home() {
               key={index}
               className="xl:w-4/12 lg:w-4/12"
             >
-              <div className="quest-card relative">
+              <div className="quest-card relative grayscale-[100%] hover:grayscale-[0%] transition">
                 <div
                   className={`${i.backgroundImage} h-80 bg-no-repeat bg-cover bg-center relative`}
                 >
@@ -56,9 +56,9 @@ export default function Home() {
               </div>
             </Link>
           ) : (
-            <div className="bg-neutral-800 xl:w-4/12 lg:w-4/12 relative">
+            <div className="relative xl:w-4/12 lg:w-4/12">
               <div
-                className={`${i.backgroundImage} h-80 bg-no-repeat bg-cover bg-center relative`}
+                className={`${i.backgroundImage} h-80 bg-no-repeat bg-cover bg-center relative grayscale-[100%] hover:grayscale-[0%] transition`}
               >
                 <h1 className={`absolute bottom-0 p-4 ${rubikMono.className}`}>
                   {i.title}
