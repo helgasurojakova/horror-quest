@@ -1,13 +1,10 @@
-import type { Metadata } from 'next'
-import { Rubik, Rubik_Mono_One } from 'next/font/google'
-import Image from 'next/image'
-import menu from '@/assets/menu.svg'
-import './globals.css'
-import Link from 'next/link'
 import Footer from '@/components/Footer'
+import Header from '@/components/Header'
+import type { Metadata } from 'next'
+import { Rubik } from 'next/font/google'
+import './globals.css'
 
 const rubik = Rubik({ subsets: ['latin'] })
-const rubikMono = Rubik_Mono_One({ weight: ['400'], subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -23,14 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={rubik.className}>
         <main className="bg-neutral-800 w-full">
-          <nav className="flex justify-between bg-neutral-950 p-4 absolute w-full z-10">
-            <Link className={`${rubikMono.className}`} href="/">
-              Квесты в Калининграде
-            </Link>
-            <button>
-              <Image src={menu} alt="menu" />
-            </button>
-          </nav>
+          <Header />
           {children}
           <Footer />
         </main>

@@ -34,13 +34,13 @@ export default function Quest() {
           </div>
         </div>
         <a
-          href="#quest"
+          href="#description"
           className="absolute bottom-20 border-2 rounded-md py-4 px-10 active:bg-white active:text-neutral-950"
         >
           Перейти к описанию
         </a>
       </section>
-      <section id="quest" className="px-4 py-8">
+      <section id="description" className="px-4 py-8">
         <h2 className="text-2xl mb-4">Описание</h2>
         <p className="mb-4">{quest?.description}</p>
         <strong>Возрастные ограничения:</strong>{' '}
