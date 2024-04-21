@@ -29,3 +29,19 @@ body {
     text-wrap: balance;
   }
 }
+
+@media (min-width: 1024px) {
+  .quest-card {
+    .description-holder {
+      max-height: 0;
+      transition: max-height 0.4s ease-out;
+    }
+  }
+  
+  .quest-card:hover {
+    .description-holder {
+      max-height: 400px;
+      transition: max-height 0.3s ease-in;
+    }
+  }
+}
