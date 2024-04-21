@@ -1,16 +1,10 @@
-import { formatPhoneNumber } from '@/helpers'
 import type { Metadata } from 'next'
 import { Rubik, Rubik_Mono_One } from 'next/font/google'
 import Image from 'next/image'
-import email from '../../public/email.svg'
-import location from '../../public/location.svg'
-import menu from '../../public/menu.svg'
-import phone from '../../public/phone.svg'
-import telegram from '../../public/telegram.svg'
-import vk from '../../public/vk.svg'
-import whatsapp from '../../public/whatsapp.svg'
+import menu from '@/assets/menu.svg'
 import './globals.css'
 import Link from 'next/link'
+import Footer from '@/components/Footer'
 
 const rubik = Rubik({ subsets: ['latin'] })
 const rubikMono = Rubik_Mono_One({ weight: ['400'], subsets: ['latin'] })
@@ -38,55 +32,7 @@ export default function RootLayout({
             </button>
           </nav>
           {children}
-          <footer className="w-full p-4">
-            <div className="flex flex-col gap-4">
-              <div className="flex gap-4 items-center">
-                <Image src={location} alt="Локация" className="w-6" />
-                <span>{process.env.REACT_APP_ADDRESS}</span>
-              </div>
-              <a
-                className="flex gap-4 items-center"
-                href={`tel:+${process.env.REACT_APP_PHONE_NUMBER}`}
-                target="_blank"
-              >
-                <Image src={phone} alt="Мобильный телефон" className="w-6" />
-                <span>
-                  {formatPhoneNumber(process.env.REACT_APP_PHONE_NUMBER)}
-                </span>
-              </a>
-              <a
-                className="flex gap-4 items-center"
-                href={`mailto:${process.env.REACT_APP_EMAIL}`}
-                target="_blank"
-              >
-                <Image src={email} alt="Почта" className="w-6" />
-                <span>{process.env.REACT_APP_EMAIL}</span>
-              </a>
-              <div className="flex items-center gap-4">
-                <a
-                  className="flex gap-4 items-center"
-                  href={process.env.REACT_APP_VK_LINK}
-                  target="_blank"
-                >
-                  <Image src={vk} alt="VK" className="w-8" />
-                </a>
-                <a
-                  className="flex gap-4 items-center"
-                  href={`https://t.me/+${process.env.REACT_APP_PHONE_NUMBER}`}
-                  target="_blank"
-                >
-                  <Image src={telegram} alt="Telegram" className="w-8" />
-                </a>
-                <a
-                  className="flex gap-4 items-center"
-                  href={`https://wa.me/+${process.env.REACT_APP_PHONE_NUMBER}`}
-                  target="_blank"
-                >
-                  <Image src={whatsapp} alt="WhatsApp" className="w-8" />
-                </a>
-              </div>
-            </div>
-          </footer>
+          <Footer />
         </main>
       </body>
     </html>
