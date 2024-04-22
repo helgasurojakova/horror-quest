@@ -47,3 +47,11 @@ export const quests = [
       'Стоимость игры для команды от 2 до 4 человек – 4000 рублей. Доплата за дополнительного игрока – 1000 рублей',
   },
 ]
+
+export const contacts = {
+  phone: process.env.REACT_APP_PHONE_NUMBER,
+  phoneLink: `tel:+${process.env.REACT_APP_PHONE_NUMBER}`,
+  telegram: `https://t.me/+${process.env.REACT_APP_PHONE_NUMBER}`,
+  whatsapp: `https://wa.me/+${process.env.REACT_APP_PHONE_NUMBER}`,
+  vk: process.env.REACT_APP_VK_LINK,
+}
