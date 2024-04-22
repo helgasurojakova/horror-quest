@@ -32,18 +32,18 @@ body {
 
 @media (min-width: 1024px) {
   .quest-card {
-    .description-holder {
+    .intro-holder {
       max-height: 0;
       transition: max-height 0.4s ease-out;
     }
   }
   
-  /* .quest-card:hover {
-    .description-holder {
+  .quest-card:hover {
+    .inside-card .intro-holder {
       max-height: 400px;
       transition: max-height 0.3s ease-in;
     }
-  } */
+  }
 }
 
 header {
