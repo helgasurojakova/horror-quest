@@ -4,8 +4,8 @@ import { Rubik_Mono_One } from 'next/font/google'
 
 const rubikMono = Rubik_Mono_One({ weight: ['400'], subsets: ['latin'] })
 
-export default function Quest() {
-  const quest = quests.find((el) => el.key === 'collector')
+export default function Quest({ params }: { params: { slug: string } }) {
+  const quest = quests.find((el) => el.key === params.slug)
 
   return (
     <main className="bg-neutral-800 w-full">
