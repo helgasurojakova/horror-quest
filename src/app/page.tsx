@@ -26,14 +26,46 @@ export default function Home() {
       <section
         id="quests"
         className="
-        flex flex-col xl:flex-row lg:flex-row md:flex-col xs:flex-col gap-6 
-        w-full px-4 py-8 xl:px-60 lg:px-40 md:px-20 sm:px-4
-        xl:h-screen lg:h-screen
+        relative w-full overflow-hidden
+        px-4 2xl:px-60 lg:px-40 md:px-20 sm:px-4
+        2xl:h-screen lg:h-screen
+        py-16 2xl:py-24 lg:py-24 md:py-16
+        pt-8 pb-16 sm:pt-8 lg:pb-24 md:pb-20 sm:pb-16
         "
       >
-        {quests.map((i, index) => {
-          return <Card key={index} data={i} />
-        })}
+        <h2
+          className={`${rubikMono.className} 
+          text-2xl 2xl:text-2xl md:text-2xl sm:text-xl 
+          pb-8 2xl:pb-24 lg:pb-24 md:pb-16 sm:pb-8`}
+        >
+          Во что поиграем..?
+        </h2>
+        <div className="flex flex-col xl:flex-row lg:flex-row md:flex-col xs:flex-col gap-6">
+          {quests.map((i, index) => {
+            return <Card key={index} data={i} />
+          })}
+        </div>
+        <div className="absolute bottom-0 left-0 bg-neutral-900 mb-0 2xl:mb-14 lg:mb-14 md:mb-0">
+          <div className={`${rubikMono.className} ticker`}>
+            <div className="ticker_wrapper text-2xl 2xl:text-4xl md:text-4xl sm:text-2xl">
+              <div className="ticker_item py-2 px-4">
+                СКЛАД КВЕСТОВ КАЛИНИНГРАД
+              </div>
+              <div className="ticker_item py-2 px-4">
+                СКЛАД КВЕСТОВ КАЛИНИНГРАД
+              </div>
+              <div className="ticker_item py-2 px-4">
+                СКЛАД КВЕСТОВ КАЛИНИНГРАД
+              </div>
+              <div className="ticker_item py-2 px-4">
+                СКЛАД КВЕСТОВ КАЛИНИНГРАД
+              </div>
+              <div className="ticker_item py-2 px-4">
+                СКЛАД КВЕСТОВ КАЛИНИНГРАД
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   )

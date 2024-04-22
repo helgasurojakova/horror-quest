@@ -57,3 +57,27 @@ header {
     transition: max-height 0.4s ease-out;
   }
 }
+
+.ticker {
+  position: relative;
+}
+
+.ticker_wrapper {
+  display: flex;
+}
+
+.ticker_item {
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+  animation: ticker 15s linear infinite;
+}
+
+@keyframes ticker{
+  0% {
+    transform: translateZ(0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
