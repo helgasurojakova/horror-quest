@@ -9,7 +9,7 @@ export default function Quest({ params }: { params: { slug: string } }) {
 
   return (
     <main className="bg-neutral-800 w-full">
-      <section className="grayscale-[50%] h-screen flex flex-col justify-center items-center">
+      <section className="grayscale-[50%] h-screen flex flex-col justify-center items-center px-4 xl:px-60 lg:px-40 md:px-20 sm:px-4">
         <div
           style={{ backgroundImage: `url(/${quest?.key}.jpg)` }}
           className="bg-center bg-no-repeat bg-cover absolute w-full h-full brightness-50"
@@ -41,7 +41,10 @@ export default function Quest({ params }: { params: { slug: string } }) {
           Перейти к описанию
         </a>
       </section>
-      <section id="description" className="px-4 py-8">
+      <section
+        id="description"
+        className="px-4 py-8 xl:px-60 lg:px-40 md:px-20 sm:px-4"
+      >
         <h2 className="text-2xl mb-4">Описание</h2>
         <p className="mb-4">{quest?.description}</p>
         <strong>Возрастные ограничения:</strong>{' '}
