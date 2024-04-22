@@ -11,7 +11,8 @@ export default function Quest() {
     <main className="bg-neutral-800 w-full">
       <section className="grayscale-[50%] h-screen flex flex-col justify-center items-center">
         <div
-          className={`${quest?.backgroundImage} bg-center bg-no-repeat bg-cover absolute w-full h-full brightness-50`}
+          style={{ backgroundImage: `url(/${quest?.key}.jpg)` }}
+          className="bg-center bg-no-repeat bg-cover absolute w-full h-full brightness-50"
         ></div>
         <div className="flex flex-col justify-start w-full p-4 z-10">
           <span className="text-lg">Квест</span>

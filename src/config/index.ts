@@ -7,7 +7,6 @@ export const quests = [
     с телами жертв. Последнюю пропавшую девушку найти не удалось.
     Возможно, она еще жива... Мы надеемся, что вам удастся ее отыскать и
     не стать очередной жертвой маньяка.`,
-    backgroundImage: 'bg-collector',
     playersCount: '2 – 6',
     time: 60,
     price: 4000,
@@ -24,7 +23,6 @@ export const quests = [
     description: `Окунись в атмосферу страха и стань главным персонажем жуткой истории
     о проклятой Мэгги. Какие тайны она скрывает? Пройди все испытания,
     проявив свои лучшие качества!`,
-    backgroundImage: 'bg-meggi',
     playersCount: '2 – 6',
     time: 60,
     price: 4000,
@@ -39,7 +37,6 @@ export const quests = [
     status: 'development',
     title: 'Гадалка',
     description: '',
-    backgroundImage: 'bg-fortuneteller',
     playersCount: '2 – 6',
     time: 60,
     price: 4000,

@@ -40,7 +40,8 @@ export default function Home() {
             >
               <div className="quest-card relative grayscale-[100%] hover:grayscale-[0%] transition">
                 <div
-                  className={`${i.backgroundImage} h-80 bg-no-repeat bg-cover bg-center relative`}
+                  style={{ backgroundImage: `url(/${i.key}.jpg)` }}
+                  className="h-80 bg-no-repeat bg-cover bg-center relative"
                 >
                   <h1
                     className={`absolute bottom-0 p-4 ${rubikMono.className}`}
@@ -58,7 +59,8 @@ export default function Home() {
           ) : (
             <div className="relative xl:w-4/12 lg:w-4/12">
               <div
-                className={`${i.backgroundImage} h-80 bg-no-repeat bg-cover bg-center relative grayscale-[100%] hover:grayscale-[0%] transition`}
+                style={{ backgroundImage: `url(/${i.key}.jpg)` }}
+                className="h-80 bg-no-repeat bg-cover bg-center relative grayscale-[100%] hover:grayscale-[0%] transition"
               >
                 <h1 className={`absolute bottom-0 p-4 ${rubikMono.className}`}>
                   {i.title}
