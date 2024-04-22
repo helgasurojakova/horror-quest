@@ -45,3 +45,15 @@ body {
     }
   }
 }
+
+header {
+  .mobile-contacts {
+    max-height: 100px;
+    transition: max-height 0.3s ease-in;
+  }
+
+  .mobile-contacts.collapsed {
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+  }
+}
