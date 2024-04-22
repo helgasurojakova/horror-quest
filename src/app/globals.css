@@ -37,11 +37,11 @@ body {
       transition: max-height 0.4s ease-out;
     }
   }
-  
-  .quest-card:hover {
+
+  .card-image:hover {
     .inside-card .intro-holder {
       max-height: 400px;
-      transition: max-height 0.3s ease-in;
+      transition: max-height 0.4s ease-in;
     }
   }
 }
@@ -73,7 +73,7 @@ header {
   animation: ticker 15s linear infinite;
 }
 
-@keyframes ticker{
+@keyframes ticker {
   0% {
     transform: translateZ(0);
   }
