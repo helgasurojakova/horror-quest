@@ -1,3 +1,10 @@
+For Docker PROD:
+docker build -t quest .
+
+docker run -d -p 127.0.0.1:3000:3000 --restart unless-stopped quest
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
