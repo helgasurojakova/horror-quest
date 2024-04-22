@@ -1,6 +1,6 @@
 import { Rubik_Mono_One } from 'next/font/google'
 import { quests } from '@/config'
-import Link from 'next/link'
+import Card from '@/components/Card'
 
 const rubikMono = Rubik_Mono_One({ weight: ['400'], subsets: ['latin'] })
 
@@ -27,47 +27,12 @@ export default function Home() {
         id="quests"
         className="
         flex flex-col xl:flex-row lg:flex-row md:flex-col xs:flex-col gap-6 
-        w-full px-4 py-8 xl:px-60 lg:px-40 md:px-20 sm:px-4 xl:py-60 lg:py-60 md:py-8 sm:py-8
+        w-full px-4 py-8 xl:px-60 lg:px-40 md:px-20 sm:px-4
         xl:h-screen lg:h-screen
         "
       >
         {quests.map((i, index) => {
-          return i?.status === 'active' ? (
-            <Link
-              href={`/quest/${i.key}`}
-              key={index}
-              className="xl:w-4/12 lg:w-4/12"
-            >
-              <div className="quest-card relative hover:grayscale-[0%] transition grayscale-[0%] xl:grayscale-[100%] lg:grayscale-[100%] md:grayscale-[0%] sm:grayscale-[0%]">
-                <div
-                  style={{ backgroundImage: `url(/${i.key}.jpg)` }}
-                  className="h-80 bg-no-repeat bg-cover bg-center relative"
-                >
-                  <h1
-                    className={`absolute bottom-0 p-4 ${rubikMono.className}`}
-                  >
-                    {i.title}
-                  </h1>
-                </div>
-                <div className="description-holder static xl:absolute lg:absolute md:static sm:static overflow-hidden">
-                  <p className="p-4 bg-neutral-900 leading-relaxed text-sm">
-                    {i.description}
-                  </p>
-                </div>
-              </div>
-            </Link>
-          ) : (
-            <div className="relative xl:w-4/12 lg:w-4/12">
-              <div
-                style={{ backgroundImage: `url(/${i.key}.jpg)` }}
-                className="h-80 bg-no-repeat bg-cover bg-center relative grayscale-[100%] hover:grayscale-[0%] transition"
-              >
-                <h1 className={`absolute bottom-0 p-4 ${rubikMono.className}`}>
-                  {i.title}
-                </h1>
-              </div>
-            </div>
-          )
+          return <Card key={index} data={i} />
         })}
       </section>
     </main>
