@@ -38,7 +38,7 @@ export default function Home() {
               key={index}
               className="xl:w-4/12 lg:w-4/12"
             >
-              <div className="quest-card relative grayscale-[100%] hover:grayscale-[0%] transition">
+              <div className="quest-card relative hover:grayscale-[0%] transition grayscale-[0%] xl:grayscale-[100%] lg:grayscale-[100%] md:grayscale-[0%] sm:grayscale-[0%]">
                 <div
                   style={{ backgroundImage: `url(/${i.key}.jpg)` }}
                   className="h-80 bg-no-repeat bg-cover bg-center relative"
