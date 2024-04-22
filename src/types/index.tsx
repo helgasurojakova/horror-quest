@@ -2,6 +2,7 @@ export type Quest = {
   key: string,
   status: string,
   title: string,
+  intro: string,
   description: string,
   playersCount: string,
   time: number,

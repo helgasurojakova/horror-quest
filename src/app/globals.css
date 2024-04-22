@@ -38,12 +38,12 @@ body {
     }
   }
   
-  .quest-card:hover {
+  /* .quest-card:hover {
     .description-holder {
       max-height: 400px;
       transition: max-height 0.3s ease-in;
     }
-  }
+  } */
 }
 
 header {

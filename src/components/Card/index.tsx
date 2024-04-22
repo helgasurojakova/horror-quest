@@ -21,11 +21,15 @@ const Card: FC<Props> = (props) => {
       onClick={() => router.push(`quest/${data.key}`)}
       className={`${
         isActive && 'cursor-pointer'
-      } quest-card relative shadow-xl hover:grayscale-[0%] transition grayscale-[0%] xl:grayscale-[100%] lg:grayscale-[100%] md:grayscale-[0%] sm:grayscale-[0%] xl:w-4/12 lg:w-4/12 h-fit`}
+      } quest-card relative shadow-xl hover:grayscale-[0%] transition grayscale-[0%] xl:grayscale-[100%] lg:grayscale-[100%] md:grayscale-[0%] sm:grayscale-[0%] 
+      xl:w-4/12 lg:w-4/12 h-fit
+      2xl:h-full lg:h-full
+      pb-0 2xl:pb-48 lg:pb-48
+      `}
     >
       <div
         style={{ backgroundImage: `url(/${data.key}.jpg)` }}
-        className="h-80 xl:h-80 lg:h-64 md:h-64 sm:h-80 bg-no-repeat bg-cover bg-center relative"
+        className="h-80 2xl:h-full lg:h-full md:h-64 sm:h-80 bg-no-repeat bg-cover bg-center relative"
       >
         <h1 className={`absolute bottom-0 p-4 ${rubikMono.className}`}>
           {data.title}
@@ -34,7 +38,7 @@ const Card: FC<Props> = (props) => {
       {isActive && (
         <div className="shadow-xl description-holder static xl:absolute lg:absolute md:static sm:static overflow-hidden">
           <p className="p-4 bg-neutral-900 leading-relaxed text-sm">
-            {data.description}
+            {data.intro}
           </p>
         </div>
       )}
