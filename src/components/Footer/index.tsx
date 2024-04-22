@@ -6,6 +6,7 @@ import phone from '@/assets/phone.svg'
 import telegram from '@/assets/telegram.svg'
 import vk from '@/assets/vk.svg'
 import whatsapp from '@/assets/whatsapp.svg'
+import { contacts } from '@/config'
 
 export default function Footer() {
   return (
@@ -14,11 +15,11 @@ export default function Footer() {
         <div className="flex gap-4 items-center">
           <Image src={location} alt="Локация" className="w-6" />
           <div>
-            <span>{process.env.REACT_APP_ADDRESS}</span>
+            <span>{contacts.adderss}</span>
             <br />
             <a
               className="text-rose-400"
-              href={process.env.REACT_APP_YANDEX_MAP_LINK}
+              href={contacts.yandexMapLink}
               target="_blank"
             >
               (Посмотреть на карте)
@@ -27,38 +28,38 @@ export default function Footer() {
         </div>
         <a
           className="flex gap-4 items-center"
-          href={`tel:+${process.env.REACT_APP_PHONE_NUMBER}`}
+          href={contacts.phoneLink}
           target="_blank"
         >
           <Image src={phone} alt="Мобильный телефон" className="w-6" />
-          <span>{formatPhoneNumber(process.env.REACT_APP_PHONE_NUMBER)}</span>
+          <span>{formatPhoneNumber(contacts.phone)}</span>
         </a>
         <a
           className="flex gap-4 items-center"
-          href={`mailto:${process.env.REACT_APP_EMAIL}`}
+          href={contacts.emailLink}
           target="_blank"
         >
           <Image src={email} alt="Почта" className="w-6" />
-          <span>{process.env.REACT_APP_EMAIL}</span>
+          <span>{contacts.email}</span>
         </a>
         <div className="flex items-center gap-4">
           <a
             className="flex gap-4 items-center"
-            href={process.env.REACT_APP_VK_LINK}
+            href={contacts.vk}
             target="_blank"
           >
             <Image src={vk} alt="VK" className="w-8" />
           </a>
           <a
             className="flex gap-4 items-center"
-            href={`https://t.me/+${process.env.REACT_APP_PHONE_NUMBER}`}
+            href={contacts.telegram}
             target="_blank"
           >
             <Image src={telegram} alt="Telegram" className="w-8" />
           </a>
           <a
             className="flex gap-4 items-center"
-            href={`https://wa.me/+${process.env.REACT_APP_PHONE_NUMBER}`}
+            href={contacts.whatsapp}
             target="_blank"
           >
             <Image src={whatsapp} alt="WhatsApp" className="w-8" />

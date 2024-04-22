@@ -54,4 +54,8 @@ export const contacts = {
   telegram: `https://t.me/+${process.env.REACT_APP_PHONE_NUMBER}`,
   whatsapp: `https://wa.me/+${process.env.REACT_APP_PHONE_NUMBER}`,
   vk: process.env.REACT_APP_VK_LINK,
+  email: process.env.REACT_APP_EMAIL,
+  emailLink: `mailto:${process.env.REACT_APP_EMAIL}`,
+  adderss: process.env.REACT_APP_ADDRESS,
+  yandexMapLink: process.env.REACT_APP_YANDEX_MAP_LINK,
 }
