@@ -16,13 +16,18 @@ const Card: FC<Props> = (props) => {
 
   const isActive = data.status === 'active'
 
+  const redirectToQuest = () => {
+    if (isActive) {
+      router.push(`quest/${data.key}`)
+    }
+  }
+
   return (
     <div
-      onClick={() => router.push(`quest/${data.key}`)}
+      onClick={() => redirectToQuest()}
       className="quest-card relative
       xl:w-4/12 lg:w-4/12 h-fit
       2xl:h-full lg:h-full
-      pb-0 2xl:pb-48 lg:pb-48
       "
     >
       <div
@@ -32,7 +37,11 @@ const Card: FC<Props> = (props) => {
         shadow-xl h-80 2xl:h-full lg:h-full md:h-64 sm:h-80 bg-no-repeat bg-cover bg-center relative`}
       >
         <div className="absolute bottom-0 inside-card w-full">
-          <h1 className={`p-4 ${rubikMono.className} title-holder bg-neutral-800 bg-opacity-70`}>{data.title}</h1>
+          <h1
+            className={`p-4 ${rubikMono.className} title-holder bg-neutral-800 bg-opacity-70`}
+          >
+            {data.title}
+          </h1>
           {isActive && (
             <div className="intro-holder static overflow-hidden hidden 2xl:block lg:block">
               <p className="p-4 bg-neutral-800 leading-relaxed text-sm bg-opacity-70">

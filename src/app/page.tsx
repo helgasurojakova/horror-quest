@@ -41,7 +41,11 @@ export default function Home() {
         >
           Во что поиграем..?
         </h2>
-        <div className="flex flex-col xl:flex-row lg:flex-row md:flex-col xs:flex-col gap-6 h-full">
+        <div
+          className="flex flex-col xl:flex-row lg:flex-row md:flex-col xs:flex-col gap-6 h-full
+          pb-0 2xl:pb-48 lg:pb-48
+        "
+        >
           {quests.map((i, index) => {
             return <Card key={index} data={i} />
           })}
