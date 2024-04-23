@@ -20,7 +20,7 @@ export default function Header() {
     <header className="bg-neutral-950 absolute w-full z-10 p-4 2xl:px-60 lg:px-40 md:px-20 sm:px-4">
       <div className="flex justify-between">
         <Link className={`${rubikMono.className}`} href="/">
-          Квесты в Калининграде
+          КЛУБ КВЕСТОВ КАЛИНИНГРАД
         </Link>
         <button
           className="block 2xl:hidden md:hidden"

@@ -11,10 +11,11 @@ export default function Home() {
         <h1
           className={`${rubikMono.className} w-full text-2xl 2xl:text-6xl md:text-4xl sm:text-4xl`}
         >
-          Склад
+          КЛУБ
           <br />
-          квестов в<br />
-          Калининграде
+          КВЕСТОВ
+          <br />
+          КАЛИНИНГРАД
         </h1>
         <a
           href="#quests"
@@ -49,19 +50,19 @@ export default function Home() {
           <div className={`${rubikMono.className} ticker`}>
             <div className="ticker_wrapper text-2xl 2xl:text-4xl md:text-4xl sm:text-2xl">
               <div className="ticker_item py-2 px-4">
-                СКЛАД КВЕСТОВ КАЛИНИНГРАД
+                КЛУБ КВЕСТОВ КАЛИНИНГРАД
               </div>
               <div className="ticker_item py-2 px-4">
-                СКЛАД КВЕСТОВ КАЛИНИНГРАД
+                КЛУБ КВЕСТОВ КАЛИНИНГРАД
               </div>
               <div className="ticker_item py-2 px-4">
-                СКЛАД КВЕСТОВ КАЛИНИНГРАД
+                КЛУБ КВЕСТОВ КАЛИНИНГРАД
               </div>
               <div className="ticker_item py-2 px-4">
-                СКЛАД КВЕСТОВ КАЛИНИНГРАД
+                КЛУБ КВЕСТОВ КАЛИНИНГРАД
               </div>
               <div className="ticker_item py-2 px-4">
-                СКЛАД КВЕСТОВ КАЛИНИНГРАД
+                КЛУБ КВЕСТОВ КАЛИНИНГРАД
               </div>
             </div>
           </div>
