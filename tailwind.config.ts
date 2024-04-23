@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'main-red': '#fe0000',
+      },
       backgroundImage: {
         'hero-pattern': 'url(/collector.jpg)',
       },
