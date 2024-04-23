@@ -31,11 +31,11 @@ const Card: FC<Props> = (props) => {
         hover:grayscale-[0%] transition grayscale-[0%] xl:grayscale-[100%] lg:grayscale-[100%] md:grayscale-[0%] sm:grayscale-[0%]
         shadow-xl h-80 2xl:h-full lg:h-full md:h-64 sm:h-80 bg-no-repeat bg-cover bg-center relative`}
       >
-        <div className="absolute bottom-0 inside-card">
-          <h1 className={`p-4 ${rubikMono.className}`}>{data.title}</h1>
+        <div className="absolute bottom-0 inside-card w-full">
+          <h1 className={`p-4 ${rubikMono.className} title-holder bg-neutral-800 bg-opacity-70`}>{data.title}</h1>
           {isActive && (
             <div className="intro-holder static overflow-hidden hidden 2xl:block lg:block">
-              <p className="p-4 bg-neutral-900 leading-relaxed text-sm bg-opacity-70">
+              <p className="p-4 bg-neutral-800 leading-relaxed text-sm bg-opacity-70">
                 {data.intro}
               </p>
             </div>
