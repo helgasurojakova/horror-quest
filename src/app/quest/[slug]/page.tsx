@@ -27,7 +27,7 @@ export default function Quest({ params }: { params: { slug: string } }) {
               Время<strong className="pl-4">{quest?.time} мин</strong>
             </span>
             <span className="border-b pb-4 border-inherit">
-              Цена<strong className="pl-4">{quest?.price} ₽</strong>
+              Цена<strong className="pl-4">от {quest?.price} ₽</strong>
             </span>
             <span className="border-b pb-4 border-inherit">
               Возраст<strong className="pl-4">{quest?.ageLimit}+</strong>
