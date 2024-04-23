@@ -14,7 +14,7 @@ import { contacts } from '@/config'
 const rubikMono = Rubik_Mono_One({ weight: ['400'], subsets: ['latin'] })
 
 export default function Header() {
-  const [isCollapsed, setCollapsed] = useState(true)
+  const [isExpanded, setExpanded] = useState(false)
 
   return (
     <header className="bg-neutral-950 absolute w-full z-10 p-4 2xl:px-60 lg:px-40 md:px-20 sm:px-4">
@@ -24,7 +24,7 @@ export default function Header() {
         </Link>
         <button
           className="block 2xl:hidden md:hidden"
-          onClick={() => setCollapsed(!isCollapsed)}
+          onClick={() => setExpanded(!isExpanded)}
         >
           <Image src={menu} alt="menu" />
         </button>
@@ -62,7 +62,7 @@ export default function Header() {
       </div>
       <div
         className={`mobile-contacts flex flex-col gap-4 2xl:hidden md:hidden overflow-hidden ${
-          isCollapsed && 'collapsed'
+          isExpanded && 'expanded'
         }`}
       >
         <a
