@@ -52,8 +52,8 @@ export const quests = [
 export const contacts = {
   phone: process.env.REACT_APP_PHONE_NUMBER,
   phoneLink: `tel:+${process.env.REACT_APP_PHONE_NUMBER}`,
-  telegram: `https://t.me/+${process.env.REACT_APP_PHONE_NUMBER}`,
-  whatsapp: `https://wa.me/+${process.env.REACT_APP_PHONE_NUMBER}`,
+  telegram: process.env.REACT_APP_TELEGRAM,
+  whatsapp: process.env.REACT_APP_WHATSAPP,
   vk: process.env.REACT_APP_VK_LINK,
   email: process.env.REACT_APP_EMAIL,
   emailLink: `mailto:${process.env.REACT_APP_EMAIL}`,

@@ -6,6 +6,8 @@ const nextConfig = {
     REACT_APP_VK_LINK: process.env.REACT_APP_VK_LINK,
     REACT_APP_ADDRESS: process.env.REACT_APP_ADDRESS,
     REACT_APP_YANDEX_MAP_LINK: process.env.REACT_APP_YANDEX_MAP_LINK,
+    REACT_APP_TELEGRAM: process.env.REACT_APP_TELEGRAM,
+    REACT_APP_WHATSAPP: process.env.REACT_APP_WHATSAPP,
   }
 };
 
