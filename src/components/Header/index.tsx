@@ -61,8 +61,8 @@ export default function Header() {
         </div>
       </div>
       <div
-        className={`mobile-contacts flex flex-col gap-4 2xl:hidden md:hidden overflow-hidden ${
-          isExpanded && 'expanded'
+        className={`flex flex-col gap-4 2xl:hidden md:hidden overflow-hidden ${
+          isExpanded ? 'max-h-fit' : 'max-h-0'     
         }`}
       >
         <a
