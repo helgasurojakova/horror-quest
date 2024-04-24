@@ -16,9 +16,11 @@ ngrok http 3000
 ```
 Windows: 
 - Скачать и разархивировать https://ngrok.com/download
-- Открыть Powershell, перейти в разархивированную директорию с ngrok.exe
-- ngrok.exe http 3000
-
+- Открыть Powershell, перейти в разархивированную директорию с ngrok.exe, выполнить:
+```
+ngrok.exe config add-authtoken 'auth_token'
+ngrok.exe http 3000
+```
 https://dashboard.ngrok.com/tunnels/agents - с vpn, можно удалять сессии
 
 
