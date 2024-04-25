@@ -9,32 +9,48 @@ export default function Quest({ params }: { params: { slug: string } }) {
 
   return (
     <main className="bg-neutral-800 w-full">
-      <section className="grayscale-[50%] h-screen flex flex-col justify-center items-center px-4 xl:px-60 lg:px-40 md:px-20 sm:px-4">
+      <section
+        className="grayscale-[50%] h-screen flex flex-col justify-center items-center 
+        px-4 2xl:px-60 lg:px-40 md:px-20 sm:px-4
+        "
+      >
         <div
           style={{ backgroundImage: `url(/${quest?.key}.jpg)` }}
           className="bg-center bg-no-repeat bg-cover absolute w-full h-full brightness-50"
         ></div>
         <div
           className="flex flex-col justify-evenly w-full h-full z-10
-          px-4 pt-20
+          pt-20
           "
         >
-          <div className="flex flex-col gap-4">
+          <div>
             <div>
               <span className="text-lg">{quest?.type}</span>
-              <h1 className={`${rubikMono.className} text-2xl mb-8`}>
+              <h1
+                className={`${rubikMono.className} text-2xl mb-8 2xl:text-4xl md:text-4xl`}
+              >
                 {quest?.title}
               </h1>
             </div>
-            {quest?.previewData.map((i) => {
-              return (
-                <span className="border-b pb-4 border-inherit" key={i.key}>
-                  {i.title}
-                  <strong className="pl-4">{i.value}</strong>
-                </span>
-              )
-            })}
+            <div className="flex flex-col gap-4 w-full 2xl:flex-row md:flex-row 2xl:gap-12 md:gap-12">
+              {quest?.previewData.map((i) => {
+                return (
+                  <span
+                    className="border-b border-inherit 2xl:border-none md:border-none 
+                    flex gap-4 flex-row 2xl:flex-col md:flex-col 2xl:gap-0 md:gap-0
+                    pb-4"
+                    key={i.key}
+                  >
+                    <h2>{i.title}</h2>
+                    <strong className="2xl:text-2xl md:text-2xl">
+                      {i.value}
+                    </strong>
+                  </span>
+                )
+              })}
+            </div>
           </div>
+
           <div className="flex justify-center">
             <a
               href="#description"
