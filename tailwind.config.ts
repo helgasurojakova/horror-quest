@@ -12,7 +12,7 @@ const config: Config = {
         'main-red': '#fe0000',
       },
       backgroundImage: {
-        'hero-pattern': 'url(/collector.jpg)',
+        'hero-pattern': 'url(/hero.jpg)',
       },
     },
   },
