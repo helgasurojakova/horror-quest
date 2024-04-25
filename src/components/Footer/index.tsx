@@ -10,15 +10,19 @@ import { contacts } from '@/config'
 
 export default function Footer() {
   return (
-    <footer className="w-full p-4 xl:px-60 lg:px-40 md:px-20 sm:px-4">
+    <footer
+      className="w-full 
+      p-4 2xl:px-60 lg:px-40 md:px-20 sm:px-4
+      pb-16 2xl:pb-24 md:pb-20
+      "
+    >
       <div className="flex flex-col gap-4">
         <div className="flex gap-4 items-center">
           <Image src={location} alt="Локация" className="w-6" />
-          <div>
+          <div className="flex flex-wrap gap-2">
             <span>{contacts.adderss}</span>
-            <br />
             <a
-              className="text-rose-400"
+              className="text-main-red"
               href={contacts.yandexMapLink}
               target="_blank"
             >
