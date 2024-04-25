@@ -27,7 +27,7 @@ export default function Home() {
         "
       >
         <h1
-          className={`${rubikMono.className} w-full text-3xl 2xl:text-6xl md:text-4xl sm:text-4xl text-main-red`}
+          className={`${rubikMono.className} w-full text-3xl 2xl:text-6xl md:text-4xl sm:text-4xl`}
         >
           КЛУБ
           <br />
