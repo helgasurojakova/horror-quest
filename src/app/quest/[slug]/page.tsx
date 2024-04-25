@@ -63,7 +63,9 @@ export default function Quest({ params }: { params: { slug: string } }) {
       </section>
       <section
         id="description"
-        className="px-4 py-8 xl:px-60 lg:px-40 md:px-20 sm:px-4"
+        className="px-4 py-8 2xl:px-60 lg:px-40 md:px-20 sm:px-4 
+        pt-8 2xl:pt-16 lg:pt-16 md:pt-12
+        "
       >
         {quest?.data.map((i) => {
           return (
