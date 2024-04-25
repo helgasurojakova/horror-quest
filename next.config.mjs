@@ -13,12 +13,6 @@ const nextConfig = {
   head: {
     script: [
       {
-        src: 'https://mc.yandex.ru/metrika/tag.js',
-        async: true,
-        defer: true
-      },
-      // Вставляем сам скрипт Yandex.Metrika в тег <script>
-      {
         innerHTML: `
           (function(m,e,t,r,i,k,a){
             m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -26,18 +20,17 @@ const nextConfig = {
             for (var j = 0; j < document.scripts.length; j++) {
               if (document.scripts[j].src === r) { return; }
             }
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-          })
-          (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a);
+          })(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
-          ym(97134923, "init", {
-            clickmap:true,
-            trackLinks:true,
-            accurateTrackBounce:true,
-            webvisor:true
-          });
+            ym(97134923, "init", {
+              clickmap: true,
+              trackLinks: true,
+              accurateTrackBounce: true,
+              webvisor: true,
+            });
         `,
-        type: 'text/javascript',
+        async: true,
       }
     ]
   }
