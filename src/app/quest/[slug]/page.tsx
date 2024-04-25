@@ -20,10 +20,12 @@ export default function Quest({ params }: { params: { slug: string } }) {
           "
         >
           <div className="flex flex-col gap-4">
-            <span className="text-lg">{quest?.type}</span>
-            <h1 className={`${rubikMono.className} text-2xl mb-8`}>
-              {quest?.title}
-            </h1>
+            <div>
+              <span className="text-lg">{quest?.type}</span>
+              <h1 className={`${rubikMono.className} text-2xl mb-8`}>
+                {quest?.title}
+              </h1>
+            </div>
             {quest?.previewData.map((i) => {
               return (
                 <span className="border-b pb-4 border-inherit" key={i.key}>
