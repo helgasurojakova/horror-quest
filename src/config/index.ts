@@ -115,11 +115,6 @@ export const quests = [
         value: '12 человек',
       },
       {
-        key: 'price',
-        title: 'Цена',
-        value: 'от 5000 ₽',
-      },
-      {
         key: 'ageLimit',
         title: 'Возраст',
         value: '0+',
@@ -141,12 +136,6 @@ export const quests = [
         • Уникальное место для организации мероприятия
         • Телевизор 
         • Камин`,
-      },
-      {
-        key: 'price',
-        title: 'Цены',
-        value:
-          '',
       },
     ],
   },
