@@ -23,7 +23,7 @@ export default function Home() {
     <main>
       <section className="bg-hero-pattern h-screen bg-center bg-no-repeat bg-cover flex flex-col justify-center items-center px-4 xl:px-60 lg:px-40 md:px-20 sm:px-4">
         <h1
-          className={`${rubikMono.className} w-full text-3xl 2xl:text-6xl md:text-4xl sm:text-4xl`}
+          className={`${rubikMono.className} w-full text-3xl 2xl:text-6xl md:text-4xl sm:text-4xl text-main-red`}
         >
           КЛУБ
           <br />

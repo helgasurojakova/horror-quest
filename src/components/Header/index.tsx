@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header className="bg-neutral-950 absolute w-full z-10 p-4 2xl:px-60 lg:px-40 md:px-20 sm:px-4">
       <div className="flex justify-between">
-        <Link className={`${rubikMono.className}`} href="/">
+        <Link className={`${rubikMono.className} text-main-red`} href="/">
           КЛУБ КВЕСТОВ КАЛИНИНГРАД
         </Link>
         <button
