@@ -69,14 +69,19 @@ export default function Quest({ params }: { params: { slug: string } }) {
           return (
             <div key={i.key}>
               <h2 className="text-2xl mb-4">{i.title}</h2>
-              <p className="mb-4" style={{ whiteSpace: 'pre-line' }}>
+              <p
+                className="mb-4 text-neutral-300"
+                style={{ whiteSpace: 'pre-line' }}
+              >
                 {i.value}
               </p>
             </div>
           )
         })}
         <strong>Возрастные ограничения:</strong>{' '}
-        <span>{quest?.ageComment ?? quest?.ageLimit}</span>
+        <span className="text-neutral-300">
+          {quest?.ageComment ?? quest?.ageLimit}
+        </span>
       </section>
     </main>
   )
