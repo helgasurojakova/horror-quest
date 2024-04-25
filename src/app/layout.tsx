@@ -3,6 +3,8 @@ import Header from '@/components/Header'
 import type { Metadata } from 'next'
 import { Rubik } from 'next/font/google'
 import './globals.css'
+import { Suspense } from "react";
+import { Metrika } from "@/components/Metrika";
 
 const rubik = Rubik({ subsets: ['latin'] })
 
@@ -24,6 +26,9 @@ export default function RootLayout({
           {children}
           <Footer />
         </main>
+        <Suspense>
+          <Metrika />
+        </Suspense>
       </body>
     </html>
   )
