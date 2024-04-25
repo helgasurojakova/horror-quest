@@ -5,6 +5,20 @@ import Card from '@/components/Card'
 const rubikMono = Rubik_Mono_One({ weight: ['400'], subsets: ['latin'] })
 
 export default function Home() {
+  const generateTickersItems = (count: number) => {
+    const items = []
+    for (let i = 0; i < count; i++) {
+      items.push(
+        <div key={i} className="ticker_item py-2 pr-6 2xl:pr-8 md:pr-8">
+          КЛУБ КВЕСТОВ КАЛИНИНГРАД
+        </div>
+      )
+    }
+    return items
+  }
+
+  const tickerItems = generateTickersItems(10)
+
   return (
     <main>
       <section className="bg-hero-pattern h-screen bg-center bg-no-repeat bg-cover flex flex-col justify-center items-center px-4 xl:px-60 lg:px-40 md:px-20 sm:px-4">
@@ -53,21 +67,7 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 bg-neutral-900 mb-0 2xl:mb-14 lg:mb-14 md:mb-0">
           <div className={`${rubikMono.className} ticker`}>
             <div className="ticker_wrapper text-2xl 2xl:text-4xl md:text-4xl sm:text-2xl">
-              <div className="ticker_item py-2 px-4">
-                КЛУБ КВЕСТОВ КАЛИНИНГРАД
-              </div>
-              <div className="ticker_item py-2 px-4">
-                КЛУБ КВЕСТОВ КАЛИНИНГРАД
-              </div>
-              <div className="ticker_item py-2 px-4">
-                КЛУБ КВЕСТОВ КАЛИНИНГРАД
-              </div>
-              <div className="ticker_item py-2 px-4">
-                КЛУБ КВЕСТОВ КАЛИНИНГРАД
-              </div>
-              <div className="ticker_item py-2 px-4">
-                КЛУБ КВЕСТОВ КАЛИНИНГРАД
-              </div>
+              {tickerItems}
             </div>
           </div>
         </div>
