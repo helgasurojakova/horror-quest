@@ -1,14 +1,17 @@
 export type Quest = {
-  key: string,
-  status: string,
-  title: string,
-  intro: string,
-  description: string,
-  playersCount: string,
-  time: number,
-  price: number,
-  ageLimit: number,
-  comment: string,
-  ageComment: string,
-  priceComment: string,
+  key: string
+  status: string
+  title: string
+  type: string
+  intro: string
+  ageLimit: string
+  ageComment: string
+  previewData: DataModule[]
+  data: DataModule[]
+}
+
+type DataModule = {
+  key: string
+  title: string
+  value: string
 }

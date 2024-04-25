@@ -15,23 +15,19 @@ export default function Quest({ params }: { params: { slug: string } }) {
           className="bg-center bg-no-repeat bg-cover absolute w-full h-full brightness-50"
         ></div>
         <div className="flex flex-col justify-start w-full p-4 z-10">
-          <span className="text-lg">Квест</span>
+          <span className="text-lg">{quest?.type}</span>
           <h1 className={`${rubikMono.className} text-2xl mb-8`}>
             {quest?.title}
           </h1>
           <div className="flex flex-col gap-4">
-            <span className="border-b pb-4 border-inherit">
-              Игроков<strong className="pl-4">{quest?.playersCount}</strong>
-            </span>
-            <span className="border-b pb-4 border-inherit">
-              Время<strong className="pl-4">{quest?.time} мин</strong>
-            </span>
-            <span className="border-b pb-4 border-inherit">
-              Цена<strong className="pl-4">от {quest?.price} ₽</strong>
-            </span>
-            <span className="border-b pb-4 border-inherit">
-              Возраст<strong className="pl-4">{quest?.ageLimit}+</strong>
-            </span>
+            {quest?.previewData.map((i) => {
+              return (
+                <span className="border-b pb-4 border-inherit" key={i.key}>
+                  {i.title}
+                  <strong className="pl-4">{i.value}</strong>
+                </span>
+              )
+            })}
           </div>
         </div>
         <a
@@ -45,14 +41,18 @@ export default function Quest({ params }: { params: { slug: string } }) {
         id="description"
         className="px-4 py-8 xl:px-60 lg:px-40 md:px-20 sm:px-4"
       >
-        <h2 className="text-2xl mb-4">Описание</h2>
-        <p className="mb-4">{quest?.description}</p>
+        {quest?.data.map((i) => {
+          return (
+            <div key={i.key}>
+              <h2 className="text-2xl mb-4">{i.title}</h2>
+              <p className="mb-4" style={{ whiteSpace: 'pre-line' }}>
+                {i.value}
+              </p>
+            </div>
+          )
+        })}
         <strong>Возрастные ограничения:</strong>{' '}
-        <span>{quest?.ageComment}</span>
-        <h2 className="text-2xl mb-4 mt-8">Особенности</h2>
-        <p className="mb-4">{quest?.comment}</p>
-        <h2 className="text-2xl mb-4 mt-8">Цены</h2>
-        <p>{quest?.priceComment}</p>
+        <span>{quest?.ageComment ?? quest?.ageLimit}</span>
       </section>
     </main>
   )
