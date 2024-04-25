@@ -49,7 +49,7 @@ export default function Home() {
         px-4 2xl:px-60 lg:px-40 md:px-20 sm:px-4
         2xl:h-screen lg:h-screen
         pt-8 2xl:pt-16 md:pt-16
-        pb-16 2xl:pb-24
+        pb-20 2xl:pb-24
         "
       >
         <h2

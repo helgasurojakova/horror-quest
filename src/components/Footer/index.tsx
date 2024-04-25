@@ -14,6 +14,7 @@ export default function Footer() {
       className="w-full 
       p-4 2xl:px-60 lg:px-40 md:px-20 sm:px-4
       pb-16 2xl:pb-24 md:pb-20
+      pt-8
       "
     >
       <div className="flex flex-col gap-4">
