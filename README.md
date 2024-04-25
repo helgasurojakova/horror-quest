@@ -4,6 +4,25 @@ docker build -t quest .
 
 docker run -d -p 127.0.0.1:3000:3000 --restart unless-stopped quest
 
+## Ngrok
+Для тестирования локальной мобилки, вывести локальный результат в интернет, предоставляет хостинг на временном DNS, сайт - https://ngrok.com/download
+
+Linux:
+```bash
+wget https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
+sudo tar xvzf ./ngrok-v3-stable-linux-amd64.tgz -C /usr/local/bin
+ngrok config add-authtoken 'auth_token'
+ngrok http 3000
+```
+Windows: 
+- Скачать и разархивировать https://ngrok.com/download
+- Открыть Powershell, перейти в разархивированную директорию с ngrok.exe, выполнить:
+```
+ngrok.exe config add-authtoken 'auth_token'
+ngrok.exe http 3000
+```
+https://dashboard.ngrok.com/tunnels/agents - с vpn, можно удалять сессии
+
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
