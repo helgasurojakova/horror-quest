@@ -14,12 +14,16 @@ export default function Quest({ params }: { params: { slug: string } }) {
           style={{ backgroundImage: `url(/${quest?.key}.jpg)` }}
           className="bg-center bg-no-repeat bg-cover absolute w-full h-full brightness-50"
         ></div>
-        <div className="flex flex-col justify-start w-full p-4 z-10">
-          <span className="text-lg">{quest?.type}</span>
-          <h1 className={`${rubikMono.className} text-2xl mb-8`}>
-            {quest?.title}
-          </h1>
+        <div
+          className="flex flex-col justify-evenly w-full h-full z-10
+          px-4 pt-20
+          "
+        >
           <div className="flex flex-col gap-4">
+            <span className="text-lg">{quest?.type}</span>
+            <h1 className={`${rubikMono.className} text-2xl mb-8`}>
+              {quest?.title}
+            </h1>
             {quest?.previewData.map((i) => {
               return (
                 <span className="border-b pb-4 border-inherit" key={i.key}>
@@ -29,13 +33,15 @@ export default function Quest({ params }: { params: { slug: string } }) {
               )
             })}
           </div>
+          <div className="flex justify-center">
+            <a
+              href="#description"
+              className="bottom-20 border-2 rounded-md py-4 px-10 transition ease-in-out delay-150 active:bg-white active:text-neutral-950 hover:bg-white hover:text-neutral-950"
+            >
+              Перейти к описанию
+            </a>
+          </div>
         </div>
-        <a
-          href="#description"
-          className="absolute bottom-20 border-2 rounded-md py-4 px-10 transition ease-in-out delay-150 active:bg-white active:text-neutral-950 hover:bg-white hover:text-neutral-950"
-        >
-          Перейти к описанию
-        </a>
       </section>
       <section
         id="description"
