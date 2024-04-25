@@ -5,6 +5,8 @@ import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
 
+declare const ym: any; // Declare `ym` as a global variable
+
 export function Metrika() {
   const pathName = usePathname();
   const searchParams = useSearchParams();
