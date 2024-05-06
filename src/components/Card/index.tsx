@@ -26,25 +26,26 @@ const Card: FC<Props> = (props) => {
     <div
       onClick={() => redirectToQuest()}
       className="quest-card relative
-      xl:w-4/12 lg:w-4/12 h-fit
-      2xl:h-full lg:h-full
+      2xl:w-4/12 w-full 
+      lg:h-full h-fit
       "
     >
       <div
         style={{ backgroundImage: `url(/${data.key}.jpg)` }}
-        className={`${isActive && 'cursor-pointer'} card-image 
-        hover:grayscale-[0%] transition grayscale-[0%] xl:grayscale-[100%] lg:grayscale-[100%] md:grayscale-[0%] sm:grayscale-[0%]
-        shadow-xl h-80 2xl:h-full lg:h-full md:h-64 sm:h-80 bg-no-repeat bg-cover bg-center relative`}
+        className={`${isActive && 'cursor-pointer'} card-image relative
+        lg:grayscale-[100%] grayscale-[0%] hover:grayscale-[0%] transition
+        bg-cover bg-center bg-no-repeat shadow-xl
+        lg:h-full h-80`}
       >
-        <div className="absolute bottom-0 inside-card w-full">
+        <div className="inside-card w-full absolute bottom-0">
           <h1
-            className={`p-4 ${rubikMono.className} title-holder bg-neutral-800 bg-opacity-70`}
+            className={`${rubikMono.className} title-holder p-4 bg-neutral-800 bg-opacity-70`}
           >
             {data.title}
           </h1>
           {isActive && (
-            <div className="intro-holder static overflow-hidden hidden 2xl:block lg:block">
-              <p className="p-4 bg-neutral-800 leading-relaxed text-sm bg-opacity-70">
+            <div className="intro-holder static lg:block overflow-hidden hidden">
+              <p className="p-4 text-sm leading-relaxed bg-neutral-800 bg-opacity-70">
                 {data.intro}
               </p>
             </div>
@@ -52,8 +53,8 @@ const Card: FC<Props> = (props) => {
         </div>
       </div>
       {isActive && (
-        <div className="shadow-xl intro-holder static xl:absolute lg:absolute md:static sm:static overflow-hidden">
-          <p className="p-4 bg-neutral-900 leading-relaxed text-sm">
+        <div className="intro-holder static lg:absolute shadow-xl overflow-hidden">
+          <p className="p-4 text-sm leading-relaxed bg-neutral-900">
             {data.intro}
           </p>
         </div>
