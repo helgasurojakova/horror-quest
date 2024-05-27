@@ -1,7 +1,7 @@
 import React from 'react'
 import { quests } from '@/config'
 import { Rubik_Mono_One } from 'next/font/google'
-import Carousel from '@/components/Carousel'
+import Carousel from '@/components/FotoramaCarousel'
 
 const rubikMono = Rubik_Mono_One({ weight: ['400'], subsets: ['latin'] })
 
@@ -69,9 +69,7 @@ export default function Quest({ params }: { params: { slug: string } }) {
         pt-8 2xl:pt-16 lg:pt-16 md:pt-12
         "
       >
-        <div className="flex justify-center">
-          <Carousel data={quest?.carouselData ?? []} />
-        </div>
+        <Carousel data={quest?.carouselData ?? []} />
         {quest?.data.map((i) => {
           return (
             <div key={i.key}>
