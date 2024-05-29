@@ -1,6 +1,7 @@
 import React from 'react'
 import { quests } from '@/config'
 import { Rubik_Mono_One } from 'next/font/google'
+import Carousel from '@/components/FotoramaCarousel'
 
 const rubikMono = Rubik_Mono_One({ weight: ['400'], subsets: ['latin'] })
 
@@ -67,23 +68,30 @@ export default function Quest({ params }: { params: { slug: string } }) {
         pt-8 2xl:pt-16 lg:pt-16 md:pt-12
         "
       >
-        {quest?.data.map((i) => {
-          return (
-            <div key={i.key}>
-              <h2 className="text-2xl mb-4">{i.title}</h2>
-              <p
-                className="mb-4 text-neutral-300"
-                style={{ whiteSpace: 'pre-line' }}
-              >
-                {i.value}
-              </p>
-            </div>
-          )
-        })}
-        <strong>Возрастные ограничения:</strong>{' '}
-        <span className="text-neutral-300">
-          {quest?.ageComment ?? quest?.ageLimit}
-        </span>
+        <div className="flex 2xl:gap-16 xl:gap-12 md:gap-8 gap-8 xl:flex-row md:flex-col flex-col">
+          <div className="xl:w-1/2">
+            <Carousel data={quest?.carouselData ?? []} />
+          </div>
+          <div className="xl:w-1/2">
+            {quest?.data.map((i) => {
+              return (
+                <div key={i.key}>
+                  <h2 className="text-2xl mb-4">{i.title}</h2>
+                  <p
+                    className="mb-4 text-neutral-300"
+                    style={{ whiteSpace: 'pre-line' }}
+                  >
+                    {i.value}
+                  </p>
+                </div>
+              )
+            })}
+            <strong>Возрастные ограничения:</strong>{' '}
+            <span className="text-neutral-300">
+              {quest?.ageComment ?? quest?.ageLimit}
+            </span>
+          </div>
+        </div>
       </section>
     </main>
   )

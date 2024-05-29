@@ -8,6 +8,7 @@ export type Quest = {
   ageComment: string
   previewData: DataModule[]
   data: DataModule[]
+  carouselData: string[]
 }
 
 type DataModule = {
