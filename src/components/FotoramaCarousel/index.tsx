@@ -17,22 +17,22 @@ const FotoramaCarousel: FC<Props> = ({ data }) => {
     <div
       className="fotorama"
       data-width="100%"
-      data-ratio="800/530"
+      data-ratio="400/265"
       data-autoplay="true"
       data-loop="true"
-      data-allowfullscreen="native"
-      // data-nav="thumbs"
+      data-allowfullscreen="true"
+      data-nav="thumbs"
     >
       {data.map((image: string, index: number) => (
-        <div key={index}>
-          <Image
-            key={index}
-            src={`/${image}.png`}
-            alt={`Slide ${index}`}
-            fill
-            style={{ objectFit: 'cover' }}
-          />
-        </div>
+        <Image
+          key={index}
+          src={`/${image}.png`}
+          alt={`Slide ${index}`}
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: '100%', height: 'auto' }}
+        />
       ))}
     </div>
   )
