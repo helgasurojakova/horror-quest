@@ -1,5 +1,5 @@
 # Используем официальный образ Node.js 18
-FROM node:18-alpine
+FROM mirror.gcr.io/node:18-alpine
 
 
 # Устанавливаем рабочую директорию внутри контейнера
