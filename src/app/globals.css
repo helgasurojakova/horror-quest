@@ -73,3 +73,8 @@ body {
 a {
   width: fit-content;
 }
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff !important;
+}

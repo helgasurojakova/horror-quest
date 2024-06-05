@@ -46,14 +46,8 @@ export default function RootLayout({
           name="keywords"
           content="квесты, Калининград, хоррор квесты, приключения, развлечения, игры, тимбилдинг, командные игры, адреналин, решение головоломок, поиск выхода, тайны, загадки, интеллектуальные игры, развивающие игры, приключенческие игры, командная работа, ужасы, триллер, экстрим, испытание, выживание, зловещий, загадочный, темный, интрига, ужасающий, напряжение"
         />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css"
-        />
       </head>
       <body className={rubik.className}>
-        <Script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" />
-        <Script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js" />
         <main className="bg-neutral-800 w-full">
           <Header />
           {children}
