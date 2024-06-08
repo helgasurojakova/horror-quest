@@ -1,7 +1,7 @@
 import React from 'react'
 import { quests } from '@/config'
 import { Rubik_Mono_One } from 'next/font/google'
-import Carousel from '@/components/FotoramaCarousel'
+import Carousel from '@/components/Carousel'
 
 const rubikMono = Rubik_Mono_One({ weight: ['400'], subsets: ['latin'] })
 

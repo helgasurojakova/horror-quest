@@ -1,29 +1,25 @@
 'use client'
-import React, { FC, useState } from 'react'
 import Image from 'next/image'
-import { Swiper, SwiperSlide } from 'swiper/react'
+import { FC, useState } from 'react'
+import SwiperCore from 'swiper'
 import 'swiper/css'
-import { Thumbs, Navigation, Autoplay } from 'swiper/modules'
-import 'swiper/css/navigation'
 import 'swiper/css/autoplay'
+import 'swiper/css/navigation'
+import { Autoplay, Navigation, Thumbs } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 interface Props {
   data: string[]
 }
 
-const FotoramaCarousel: FC<Props> = ({ data }) => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null)
-
-  const onSlideChange = (swiper: any) => {
-    // console.log(swiper)
-  }
+const Carousel: FC<Props> = ({ data }) => {
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperCore | null>(null)
 
   return (
     <div>
       <Swiper
         spaceBetween={0}
         slidesPerView={1}
-        onSlideChange={onSlideChange}
         modules={[Thumbs, Navigation, Autoplay]}
         thumbs={{ swiper: thumbsSwiper }}
         navigation
@@ -68,4 +64,4 @@ const FotoramaCarousel: FC<Props> = ({ data }) => {
   )
 }
 
-export default FotoramaCarousel
+export default Carousel
