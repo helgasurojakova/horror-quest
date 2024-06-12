@@ -125,6 +125,7 @@ export const quests = [
       { name: 'observation2.jpg', type: 'image' },
       { name: 'observation3.jpg', type: 'image' },
       { name: 'observation4.jpg', type: 'image' },
+      { name: 'observation5.jpg', type: 'image' },
     ],
     previewData: [
       {
