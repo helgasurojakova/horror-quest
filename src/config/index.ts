@@ -7,7 +7,12 @@ export const quests = [
     intro: `С 90-х годов доктор Марин исследовал опасное психическое заболевание. Одной девушке удалось выжить, и она утверждает, что эксперимент АМОК вышел из под контроля…`,
     ageLimit: '16+',
     ageComment: '16+ (с 14 лет в сопровождении взрослых)',
-    carouselData: ['amok1', 'amok2', 'amok3', 'amok4'],
+    carouselData: [
+      { name: 'amok1.png', type: 'image' },
+      { name: 'amok2.png', type: 'image' },
+      { name: 'amok3.png', type: 'image' },
+      { name: 'amok4.png', type: 'image' },
+    ],
     previewData: [
       {
         key: 'playersCount',
@@ -115,7 +120,12 @@ export const quests = [
       'Для просмотра за прохождением квеста вашими друзьями, наша просторная комната, оборудованная телевизором и камином.',
     ageLimit: '0+',
     ageComment: '16+ (с 14 лет в сопровождении взрослых)',
-    carouselData: [],
+    carouselData: [
+      { name: 'observation1.jpg', type: 'image' },
+      { name: 'observation2.jpg', type: 'image' },
+      { name: 'observation3.jpg', type: 'image' },
+      { name: 'observation4.jpg', type: 'image' },
+    ],
     previewData: [
       {
         key: 'guestsCount',

@@ -7,9 +7,10 @@ import 'swiper/css/autoplay'
 import 'swiper/css/navigation'
 import { Autoplay, Navigation, Thumbs } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { CaroselDataItem } from '@/types'
 
 interface Props {
-  data: string[]
+  data: CaroselDataItem[]
 }
 
 const Carousel: FC<Props> = ({ data }) => {
@@ -26,10 +27,16 @@ const Carousel: FC<Props> = ({ data }) => {
         autoplay
         loop
       >
-        {data.map((image: string, index: number) => (
-          <SwiperSlide key={index}>
+        {data.map((item: CaroselDataItem, index: number) => (
+          <SwiperSlide
+            key={index}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          >
             <Image
-              src={`/${image}.png`}
+              src={`/${item.name}`}
               alt={`Slide ${index}`}
               width={0}
               height={0}
@@ -47,10 +54,10 @@ const Carousel: FC<Props> = ({ data }) => {
         slidesPerView={data.length}
         spaceBetween={8}
       >
-        {data.map((image: string, index: number) => (
+        {data.map((item: CaroselDataItem, index: number) => (
           <SwiperSlide key={index} style={{ cursor: 'pointer' }}>
             <Image
-              src={`/${image}.png`}
+              src={`/${item.name}`}
               alt={`Slide ${index}`}
               width={0}
               height={0}

@@ -16,3 +16,8 @@ type DataModule = {
   title: string
   value: string
 }
+
+export type CaroselDataItem = {
+  name: string
+  type: string
+}
