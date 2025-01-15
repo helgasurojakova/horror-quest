@@ -10,7 +10,14 @@ const nextConfig = {
     REACT_APP_WHATSAPP: process.env.REACT_APP_WHATSAPP,
   },
   images: {
-    domains: ['kaliningrad.mir-kvestov.ru'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'kaliningrad.mir-kvestov.ru',
+        pathname: '**',
+      },
+    ],
+    // domains: ['kaliningrad.mir-kvestov.ru'],
   },
 }
 
