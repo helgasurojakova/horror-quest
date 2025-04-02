@@ -75,8 +75,6 @@ export const quests = [
       { name: 'fortuneteller5.jpg', type: 'image' },
       { name: 'fortuneteller6.jpg', type: 'image' },
       { name: 'fortuneteller7.jpg', type: 'image' },
-      { name: 'fortuneteller8.jpg', type: 'image' },
-      { name: 'fortuneteller9.jpg', type: 'image' },
     ],
     previewData: [
       {
