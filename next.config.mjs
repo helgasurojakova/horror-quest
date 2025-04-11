@@ -16,6 +16,11 @@ const nextConfig = {
         hostname: 'kaliningrad.mir-kvestov.ru',
         pathname: '**',
       },
+      {
+        protocol: 'https',
+        hostname: 'questguild.ru',
+        pathname: '**',
+      },
     ],
     // domains: ['kaliningrad.mir-kvestov.ru'],
   },

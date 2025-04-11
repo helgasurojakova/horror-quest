@@ -18,8 +18,8 @@ export default function Footer() {
       pt-8
       "
     >
-      <div className="flex justify-between flex-wrap gap-10">
-        <div className="flex flex-col gap-4">
+      <div className="flex justify-between flex-col gap-16 items-center">
+        <div className="flex flex-col gap-4 items-center">
           <div className="flex gap-4 items-center">
             <Image src={location} alt="Локация" className="w-6" />
             <div className="flex flex-wrap gap-2">
