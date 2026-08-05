@@ -132,7 +132,7 @@ export const quests = [
     type: '',
     intro: `Кинотеатр, где страх выходит за пределы экрана. Свет гаснет, фильм начинается — и в какой-то момент ты перестаёшь понимать, где заканчивается кино…`,
     ageLimit: '18+',
-    ageComment: '18+ на некоторые сеансы фильмов',
+    ageComment: '12+ (18+ на некоторые сеансы фильмов)',
     carouselData: [
       { name: 'cinema1.jpg', type: 'image' },
       { name: 'cinema2.jpg', type: 'image' },

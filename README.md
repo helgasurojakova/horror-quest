@@ -1,8 +1,8 @@
 For Docker PROD:
 
-docker build -t quest .
+docker build -t quest-v24 .
 
-docker run -d -p 127.0.0.1:3000:3000 --restart unless-stopped quest
+docker run -d -p 127.0.0.1:3000:3000 --restart unless-stopped quest-v24
 
 ## Ngrok
 Для тестирования локальной мобилки, вывести локальный результат в интернет, предоставляет хостинг на временном DNS, сайт - https://ngrok.com/download
