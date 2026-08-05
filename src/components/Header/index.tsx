@@ -3,6 +3,7 @@ import { useState } from 'react'
 import menu from '@/assets/menu.svg'
 import phone from '@/assets/phone.svg'
 import telegram from '@/assets/telegram.svg'
+import tiktok from '@/assets/tiktok.svg'
 import vk from '@/assets/vk.svg'
 import whatsapp from '@/assets/whatsapp.svg'
 import { formatPhoneNumber } from '@/helpers'
@@ -58,6 +59,13 @@ export default function Header() {
           >
             <Image src={whatsapp} alt="WhatsApp" className="w-6" />
           </a>
+          <a
+            className="flex gap-4 items-center"
+            href={contacts.tiktok}
+            target="_blank"
+          >
+            <Image src={tiktok} alt="TikTok" className="w-6" />
+          </a>
         </div>
       </div>
       <div
@@ -94,6 +102,13 @@ export default function Header() {
             target="_blank"
           >
             <Image src={whatsapp} alt="WhatsApp" className="w-8" />
+          </a>
+          <a
+            className="flex gap-4 items-center"
+            href={contacts.tiktok}
+            target="_blank"
+          >
+            <Image src={tiktok} alt="TikTok" className="w-8" />
           </a>
         </div>
       </div>

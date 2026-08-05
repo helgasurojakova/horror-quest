@@ -1,0 +1,24 @@
+# Зависимости и артефакты сборки хоста — ставятся и собираются внутри образа
+node_modules
+.next
+out
+build
+
+# git и локальные файлы
+.git
+.gitignore
+.vscode
+.idea
+.DS_Store
+
+# логи
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# локальные env-файлы (базовый .env нужен на этапе сборки — не исключаем)
+.env*.local
+
+# докер
+Dockerfile
+.dockerignore

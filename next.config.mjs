@@ -8,6 +8,7 @@ const nextConfig = {
     REACT_APP_YANDEX_MAP_LINK: process.env.REACT_APP_YANDEX_MAP_LINK,
     REACT_APP_TELEGRAM: process.env.REACT_APP_TELEGRAM,
     REACT_APP_WHATSAPP: process.env.REACT_APP_WHATSAPP,
+    REACT_APP_TIKTOK: process.env.REACT_APP_TIKTOK,
   },
   images: {
     remotePatterns: [

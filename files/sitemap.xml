@@ -24,4 +24,10 @@
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
    </url>
+   <url>
+      <loc>https://questkaliningrad.ru/quest/cinema</loc>
+      <lastmod>2026-08-06</lastmod>
+      <changefreq>daily</changefreq>
+      <priority>0.8</priority>
+   </url>
 </urlset>

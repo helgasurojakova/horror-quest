@@ -26,7 +26,7 @@ const Card: FC<Props> = (props) => {
     <div
       onClick={() => redirectToQuest()}
       className="quest-card relative
-      2xl:w-4/12 w-full 
+      2xl:w-3/12 w-full
       lg:h-full h-fit
       "
     >

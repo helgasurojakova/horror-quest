@@ -126,6 +126,72 @@ export const quests = [
     ],
   },
   {
+    key: 'cinema',
+    status: 'active',
+    title: 'Первый хоррор кинотеатр',
+    type: '',
+    intro: `Кинотеатр, где страх выходит за пределы экрана. Свет гаснет, фильм начинается — и в какой-то момент ты перестаёшь понимать, где заканчивается кино…`,
+    ageLimit: '18+',
+    ageComment: '18+ на некоторые сеансы фильмов',
+    carouselData: [
+      { name: 'cinema1.jpg', type: 'image' },
+      { name: 'cinema2.jpg', type: 'image' },
+      { name: 'cinema3.jpg', type: 'image' },
+      { name: 'cinema4.jpg', type: 'image' },
+    ],
+    previewData: [
+      {
+        key: 'playersCount',
+        title: 'Игроков',
+        value: '1 – 6',
+      },
+      {
+        key: 'time',
+        title: 'Время',
+        value: 'Сеанс',
+      },
+      {
+        key: 'price',
+        title: 'Цена',
+        value: 'от 5000 ₽',
+      },
+      {
+        key: 'ageLimit',
+        title: 'Возраст',
+        value: '12+ (18+)',
+      },
+    ],
+    data: [
+      {
+        key: 'description',
+        title: 'Описание',
+        value: `Представь кинотеатр, где страх выходит за пределы экрана.
+Свет гаснет. Фильм начинается. Ощущение, что кто-то находится рядом с тобой в зале… И в какой-то момент ты перестаёшь понимать — это часть фильма… или уже нет. 
+Мы создали  атмосферный кинотеатр с элементами horror performance — место, где страх становится частью просмотра.
+Это вечер, который вы не забудете, даже если очень захотите.`,
+      },
+      {
+        key: 'features',
+        title: 'Особенности',
+        value: `• Культовые хорроры  
+        • Полное погружение в атмосферу  
+        • Неожиданные появления актёров  
+        • Декорации, от которых мурашки по коже`,
+      },
+      {
+        key: 'price',
+        title: 'Цены',
+        value:
+          'Стоимость игры для команды от 1 до 6 человек – 5000 рублей. Доплата за дополнительного игрока – 1000 рублей.',
+      },
+      {
+        key: 'restrictions',
+        title: 'Ограничения',
+        value: `Хоррор кинотеатр нельзя проходить людям с астмой и эпилепсией. Если у вас имеются противопоказания к активным спортивным играм, а также травмы, обязательно уведомите об этом оператора. Запрещено посещение перформанса в состоянии алкогольного или другого опьянения. В случае неадекватного и агрессивного поведения персонал вправе отказать команде в прохождении проекта.`,
+      },
+    ],
+  },
+  {
     key: 'observation',
     status: 'active',
     title: 'Комната просмотров',
@@ -185,6 +251,7 @@ export const contacts = {
   phoneLink: `tel:+${process.env.REACT_APP_PHONE_NUMBER}`,
   telegram: process.env.REACT_APP_TELEGRAM,
   whatsapp: process.env.REACT_APP_WHATSAPP,
+  tiktok: process.env.REACT_APP_TIKTOK,
   vk: process.env.REACT_APP_VK_LINK,
   email: process.env.REACT_APP_EMAIL,
   emailLink: `mailto:${process.env.REACT_APP_EMAIL}`,

@@ -4,6 +4,7 @@ import email from '@/assets/email.svg'
 import location from '@/assets/location.svg'
 import phone from '@/assets/phone.svg'
 import telegram from '@/assets/telegram.svg'
+import tiktok from '@/assets/tiktok.svg'
 import vk from '@/assets/vk.svg'
 import whatsapp from '@/assets/whatsapp.svg'
 import { contacts } from '@/config'
@@ -70,6 +71,13 @@ export default function Footer() {
               target="_blank"
             >
               <Image src={whatsapp} alt="WhatsApp" className="w-8" />
+            </a>
+            <a
+              className="flex gap-4 items-center"
+              href={contacts.tiktok}
+              target="_blank"
+            >
+              <Image src={tiktok} alt="TikTok" className="w-8" />
             </a>
           </div>
         </div>
