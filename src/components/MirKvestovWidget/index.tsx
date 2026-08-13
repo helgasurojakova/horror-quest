@@ -7,10 +7,13 @@ const rubikMono = Rubik_Mono_One({ weight: ['400'], subsets: ['latin'] })
 
 export default function MirKvestovWidget() {
   return (
-    <div className="flex flex-col xl:flex-row xl:flex-wrap gap-16 items-center">
+    <div
+      className="flex flex-col xl:flex-row xl:flex-wrap gap-16
+      items-center xl:items-start xl:justify-center"
+    >
       <div className="flex flex-col gap-8 items-center">
         <h2
-          className={`${rubikMono.className} 
+          className={`${rubikMono.className} xl:min-h-16
           text-xl sm:text-2xl`}
         >
           Амок
@@ -43,7 +46,7 @@ export default function MirKvestovWidget() {
       </div>
       <div className="flex flex-col gap-8 items-center">
         <h2
-          className={`${rubikMono.className} 
+          className={`${rubikMono.className} xl:min-h-16
           text-xl sm:text-2xl`}
         >
           Гадалка
@@ -71,6 +74,26 @@ export default function MirKvestovWidget() {
             alt="Рейтинг квеста на сайте Гильдии Квестов"
             title="Рейтинг квеста на сайте Гильдии Квестов"
             className="rounded-lg"
+          />
+        </Link>
+      </div>
+      <div className="flex flex-col gap-8 items-center">
+        <h2
+          className={`${rubikMono.className} max-w-[210px] text-center xl:min-h-16
+          text-xl sm:text-2xl`}
+        >
+          Финальный просмотр
+        </h2>
+        <Link
+          href="https://kaliningrad.mir-kvestov.ru/quests/klub-kvestov-finalnyy-prosmotr"
+          target="_blank"
+        >
+          <Image
+            src="https://kaliningrad.mir-kvestov.ru/widgets/12997/img"
+            width="210"
+            height="88"
+            alt="Отзывы на Квест в реальности Финальный просмотр (Клуб квестов)"
+            title="Отзывы на Квест в реальности Финальный просмотр (Клуб квестов)"
           />
         </Link>
       </div>
